@@ -1,0 +1,18 @@
+.formcontent{
+  display: none;
+  margin: 30px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  /* text-align: center; */
+}
+
+.formcontent > *{
+  font-weight: 800;
+}
+
+.block{
+  display: block;
+}
+
+.weight{
+  font-weight: 300;
+}
