@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "table",
+      "quantity": 1,
+      "price": 5000,
+      "category": "furniture",
+      "review": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "id": 2,
+      "name": "TV",
+      "quantity": 2,
+      "price": 20000,
+      "category": "electronics",
+      "review": "⭐"
+    },
+    {
+      "id": 3,
+      "name": "PC",
+      "quantity": 4,
+      "price": 40000,
+      "category": "electronics",
+      "review": "⭐⭐⭐"
+    },
+    {
+      "id": 4,
+      "name": "Bag",
+      "quantity": 3,
+      "price": 2000,
+      "category": "other",
+      "review": "⭐⭐⭐⭐⭐"
+    }
+  ]
+}

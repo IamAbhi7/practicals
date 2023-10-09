@@ -1,0 +1,97 @@
+<!-- <div class="container vh-100">
+  <div class="row justify-content-center h-100">
+    <div class="card my-auto shadow">
+      <div class="card-body px-5">
+        <div class="text-center">
+        </div>
+        <div class="text-center">
+          <h2>Welcome</h2>
+        </div>
+        <p style="color: lightslategray; text-align: center;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter your login
+          details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" class="form-control" formControlName="email"
+              name="email" />
+              <div *ngIf="checkIfControlValid('email')">
+                <small class="text-danger" *ngIf="checkControlHasError('email','required')">
+                  Email is required
+                </small>
+              </div>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Password" class="form-control" formControlName="password"
+              name="password" />
+              <div *ngIf="checkIfControlValid('password')">
+                <small class="text-danger" *ngIf="checkControlHasError('password','required')">
+                  Password is required
+                </small>
+              </div>
+          </div>
+          <input type="submit" class="btn btn-primary w-100" value="Login" name="" [disabled]="!loginForm.valid">
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container h-100 mt-5 justify-content-center align-items-center">
+  <div class="row h-100 justify-content-center align-items-center">
+      <form class="col-md-9" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="AppForm shadow-lg">
+              <div class="row">
+                  <div class="col-md-6 d-flex justify-content-center align-items-center">
+                      <div class="AppFormLeft">
+
+                          <h1>Login</h1>
+                          <div class="form-group position-relative mb-4 mt-2">
+                              <input type="email" class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none" id="username"
+                                  placeholder="Username" formControlName="email">
+                                  <i class="fa fa-user-o"></i>
+                                  <div *ngIf="checkIfControlValid('email')">
+                                    <small class="text-danger" *ngIf="checkControlHasError('email','required')">
+                                      Email is required
+                                    </small>
+                                  </div>
+                          </div>
+                          <div class="form-group position-relative mb-4">
+                              <input type="password" class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none" id="password"
+                                  placeholder="Password" formControlName="password">
+                                  <i class="fa fa-key"></i>
+                                  <div *ngIf="checkIfControlValid('password')">
+                                    <small class="text-danger" *ngIf="checkControlHasError('password','required')">
+                                      Password is required
+                                    </small>
+                                  </div>
+
+                          </div>
+                          
+
+                          <button class="btn btn-success btn-block shadow border-0 py-2 text-uppercase " [disabled]="!loginForm.valid">
+                              Login
+                          </button>
+
+                          <p class="text-center mt-5">
+                              Don't have an account?
+                              <span>
+                                  Create your account
+                              </span>
+
+                          </p>
+
+                      </div>
+
+                  </div>
+                  <div class="col-md-6">
+                      <div class="AppFormRight position-relative d-flex justify-content-center flex-column align-items-center text-center p-5 text-white">
+                          <h2 class="position-relative px-4 pb-3 mb-4">Welcome</h2>
+                          <p>Lorem ipsuing elit. Molomos totam est voluptatum i omos totam est voluptatum i ure sit consectetur ill</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </form>
+  </div>
+</div>

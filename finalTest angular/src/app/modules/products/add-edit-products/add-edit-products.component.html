@@ -1,0 +1,96 @@
+<div class="modal-header">
+  <h3 class="modal-title pull-left">Add Product</h3>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="onClose()">
+    <span aria-hidden="true">
+      &times;
+    </span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup] = "productForm">
+    <div class="form-group row">
+      <div class="col">
+        <label><small>Name</small></label>
+        <input formControlName="name" class="form-control" placeholder="Name" maxlength="250"> 
+        <div *ngIf="checkIfControlValid('name')">
+
+          <small class="text-danger" *ngIf="checkControlHasError('name','required')">
+            Name is required
+          </small>
+
+          <small class="text-danger" *ngIf="checkControlHasError('name','minlength')">
+            Name can be minimum of 2 character
+          </small>
+           
+        </div>
+      </div>
+      <div class="col">
+        <label><small>Quantity</small></label>
+        <input formControlName="quantity" type="number" class="form-control" placeholder="quantity" maxlength="250">  
+        <div *ngIf="checkIfControlValid('quantity')">
+
+          <small class="text-danger" *ngIf="checkControlHasError('quantity','required')">
+            Quantity is required
+          </small>
+
+          <small class="text-danger" *ngIf="checkControlHasError('quantity','max')">
+            Quantity can be maximum of 50
+          </small>
+           
+        </div> 
+      </div>   
+       
+    </div> 
+    <div class="form-group row">
+      <div class="col">
+        <label><small>Price</small></label>
+        <input formControlName="price" type="number" class="form-control" placeholder="Price" maxlength="250">   
+        <div *ngIf="checkIfControlValid('price')">
+
+          <small class="text-danger" *ngIf="checkControlHasError('price','required')">
+            Price is required
+          </small>
+           
+        </div> 
+      </div>
+      <div class="col">
+        <label>Category:  </label><br/>
+        <input type="radio" formControlName="category" value="electronics" > Electronics
+        <input type="radio" formControlName="category" value="furniture"> Furniture 
+        <input type="radio" formControlName="category" value="other"> Other
+        <div *ngIf="checkIfControlValid('category')">
+
+          <small class="text-danger" *ngIf="checkControlHasError('category','required')">
+            Category is required
+          </small>
+           
+        </div>
+      </div> 
+    </div>
+    <div class="from-group row">
+      <div class="col">
+          <label for="review">Review:</label>
+    
+          <select formControlName="review" id="review" class="form-control">  
+            <option value="">Select</option>
+            <option value="⭐">⭐</option>
+            <option value="⭐⭐⭐">⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>                
+          </select>  
+          
+          <div *ngIf="checkIfControlValid('review')">
+
+            <small class="text-danger" *ngIf="checkControlHasError('review','required')">
+              Review is required
+            </small>
+             
+          </div>
+      </div>
+    </div>
+  </form> 
+</div>
+<div class="modal-footer">
+  <button id="btnSave" class="btn btn-primary" (click)="save()" [disabled]="!productForm.valid">Save</button>
+  <button class="btn btn-secondary" (click)="onClose()">Cancel</button>    
+</div>
+  

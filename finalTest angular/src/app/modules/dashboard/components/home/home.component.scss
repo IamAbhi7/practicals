@@ -1,0 +1,66 @@
+.banner{
+  // background-image: url(./shop.jpg);
+  background-image: url('./brazil.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+
+@media screen and (max-width: 775px) {
+  .banner {
+    height: 400px;
+    // width: 400px;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .banner {
+    height: 400px;
+    width: 500px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner {
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .banner {
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+  }
+}
+
+// * welcome section *
+// .welcome-section {
+//   background: url('../../../assets/images/final-banner.png') no-repeat center center;
+//   background-size: cover;
+//   color: red;
+//   min-height: 550px;
+//   display: flex;
+//   align-items: center;
+//   width: 100%;
+//   text-align: center;
+//   opacity: 0.9;
+//   position: relative;
+//   margin: 100px 0 0 0 ;
+// }
+// 18:59
+// <div class="welcome-section">
+
+// </div>

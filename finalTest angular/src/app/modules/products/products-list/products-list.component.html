@@ -1,0 +1,36 @@
+<div class="table-responsive-sm below">
+  <div class=" mt-5">
+    <ngx-datatable
+    class="bootstrap"
+    [rows]="products"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'">
+    <ngx-datatable-column name="ID" prop="id"></ngx-datatable-column>
+    <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+    <ngx-datatable-column name="Quantity" prop="quantity"></ngx-datatable-column>
+    <ngx-datatable-column name="Price" prop="price"></ngx-datatable-column>
+    <ngx-datatable-column name="Category" prop="category"></ngx-datatable-column>
+    <ngx-datatable-column name="Review" prop="review"></ngx-datatable-column>
+    
+    <ngx-datatable-column [sortable]="false" [width]="150">
+      <ng-template let-column="column" ngx-datatable-header-template>
+        <div class="text-right mr-3">
+          <button title="Add Product" class="btn btn-success btn-sm" (click)="openAddEditProductModal()">
+            Add
+          </button>
+        </div>
+      </ng-template>
+      <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-id="value" let-row="row">
+        <button title="Edit Product" type="button" class="btn btn-sm btn-secondary" (click)="openAddEditProductModal(row)">
+          Edit
+        </button> &nbsp;
+        <button title="Delete Product" type="button" class="btn btn-sm btn-secondary" (click)="openDeleteProductModal(row)">
+          Delete
+        </button>
+      </ng-template>
+    </ngx-datatable-column>  
+    </ngx-datatable>
+  </div>
+</div>
